@@ -31,10 +31,10 @@ app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/category",categoryRoutes);
 app.use("/api/v1/product",productRoutes)
 
-app.use(express.static(path.join(__dirname,'./cleint/build/')));
+app.use(express.static(path.join(__dirname,'../cleint/build/')));
 //rest api
 app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname,'./cleint/build/index.html'))
+    res.sendFile(path.join(__dirname,'../cleint/build/index.html'))
 })
 //PORT
 const PORT = process.env.PORT;
